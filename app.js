@@ -35,7 +35,7 @@ const menu = {
     };
   },
 
-  addDishToCoourse(courseName, dishName, dishPrice) {
+  addDishToCourse(courseName, dishName, dishPrice) {
     const dish = { dishName, dishPrice };
     return this._courses[courseName].push(dish);
   },
@@ -54,3 +54,15 @@ const menu = {
     return `Total price for ${appetizer.dishName}, ${main.dishName}, ${dessert.dishName} is: ${totalPrice}`;
   }
 };
+
+menu.addDishToCourse("appetizers", "cezar salad", 6.5);
+menu.addDishToCourse("appetizers", "tapa", 4.5);
+console.log(menu.appetizers);
+
+menu.addDishToCourse("desserts", "brownie", 2.9);
+console.log(menu.desserts);
+
+menu.addDishToCourse("mains", "meat and potatos", 9.5);
+console.log(menu.mains);
+
+console.log(menu.generateRandomMeal());
